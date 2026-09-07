@@ -1,0 +1,23 @@
+:root{
+  --bg:#07131f;--panel:#0d1c2b;--panel2:#102338;--line:#23445f;
+  --text:#d9e4ee;--muted:#91a2b3;--cyan:#57d6ff;--cyan2:#1c8eb4;
+}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 50% 10%,#0c2636 0,#07131f 38%,#050c14 100%);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.app{min-height:100vh;max-width:760px;margin:auto;padding:28px 20px 96px}
+.topbar{display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:42px;font-weight:800;letter-spacing:12px}.status{color:#77d8ff;letter-spacing:6px;margin-top:8px;font-size:12px}
+.iconBtn,.nav,button{color:var(--text);background:transparent;border:1px solid var(--line);cursor:pointer}
+.iconBtn{font-size:22px;width:66px;height:66px;border-radius:20px}
+.orbWrap{text-align:center;padding:30px 0 18px}.orb{width:260px;height:260px;border:2px solid #4ecff8;border-radius:50%;margin:auto;display:grid;place-items:center;box-shadow:0 0 40px rgba(64,202,255,.08)}
+.core{width:105px;height:105px;border-radius:50%;background:radial-gradient(circle,#8ff0ff,#25b8e4 35%,rgba(30,120,150,.12) 70%);filter:blur(2px);box-shadow:0 0 55px #2abbe8}
+.orb.listening{animation:pulse 1s infinite;border-color:#9beaff}.orb.thinking{animation:spin 2.5s linear infinite}.orb.speaking{animation:pulse .7s infinite}
+@keyframes pulse{50%{transform:scale(1.04);box-shadow:0 0 60px rgba(87,214,255,.35)}}@keyframes spin{to{transform:rotate(360deg)}}
+#stateText{font-size:20px;color:#bac9d6;margin:28px auto;max-width:520px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.quick button{border-radius:20px;padding:20px 10px;font-size:16px;background:rgba(10,27,42,.8)}
+.conversation{margin-top:28px;background:rgba(10,25,39,.82);border:1px solid var(--line);border-radius:28px;padding:20px;min-height:300px}.sectionTitle{letter-spacing:5px;color:var(--muted);font-size:13px;margin-bottom:16px}.chat{height:250px;overflow:auto;display:flex;flex-direction:column;gap:12px;padding-right:4px}
+.msg{max-width:82%;padding:15px 17px;border-radius:22px;line-height:1.45}.user{align-self:flex-end;background:#1c3b53;border-bottom-right-radius:6px}.jarvis{align-self:flex-start;background:#122536;border:1px solid var(--line);border-bottom-left-radius:6px}
+.commandBar{display:grid;grid-template-columns:1fr auto auto auto;gap:10px;margin-top:20px}input{min-width:0;background:#0b1723;border:1px solid var(--line);border-radius:18px;color:var(--text);padding:18px;font-size:16px}
+.commandBar button{border-radius:18px;padding:0 16px;font-size:16px}.wakeBtn{background:#17283a!important}.wakeBtn.active{background:#d8f5ff!important;color:#07131f!important}.micBtn,.sendBtn{min-width:58px}
+nav{position:fixed;bottom:0;left:0;right:0;background:rgba(5,13,21,.94);border-top:1px solid var(--line);display:flex;justify-content:center;gap:10px;padding:10px calc(max(12px, env(safe-area-inset-left))) calc(10px + env(safe-area-inset-bottom))}
+.nav{width:110px;border:0;color:#9bb0c0;font-size:24px;padding:7px}.nav span{display:block;font-size:12px;margin-top:3px}.nav.active{color:#72d9ff}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.62);display:grid;place-items:center;padding:20px;z-index:5}.hidden{display:none}.modalCard{width:min(650px,100%);max-height:80vh;overflow:auto;background:#0b1825;border:1px solid var(--line);border-radius:24px;padding:22px}.modalHead{display:flex;justify-content:space-between;align-items:center}.modalHead button{border:0;font-size:20px}.taskItem,.projectItem,.memoryItem{padding:14px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:#102131}.taskRow{display:flex;gap:8px;margin:12px 0}.taskRow input{padding:12px;flex:1}.taskRow button{border-radius:12px;padding:0 15px}
+@media(max-width:520px){.app{padding:24px 16px 95px}.brand{font-size:34px;letter-spacing:9px}.orb{width:210px;height:210px}.core{width:85px;height:85px}.quick button{font-size:14px;padding:17px 5px}.commandBar{grid-template-columns:1fr auto auto}.wakeBtn{grid-column:2}.micBtn{grid-column:3}.sendBtn{grid-column:3;display:none}.commandBar:has(.wakeBtn.active){}nav{gap:0}.nav{width:25%}}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07131f">
+  <title>JARVIS</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">JARVIS</div>
+        <div id="status" class="status">SYSTEM ONLINE</div>
+      </div>
+      <button id="settingsBtn" class="iconBtn" aria-label="Settings">⚙</button>
+    </header>
+
+    <section class="orbWrap">
+      <div id="orb" class="orb"><div class="core"></div></div>
+      <p id="stateText">Ready for your command, Dev.</p>
+    </section>
+
+    <section class="quick">
+      <button data-command="brief me">☀ Brief me</button>
+      <button data-command="add task">✓ Add task</button>
+      <button data-command="projects">◇ Projects</button>
+    </section>
+
+    <section class="conversation">
+      <div class="sectionTitle">CONVERSATION</div>
+      <div id="chat" class="chat"></div>
+    </section>
+
+    <section class="commandBar">
+      <input id="commandInput" placeholder="Give JARVIS a command..." autocomplete="off">
+      <button id="wakeBtn" class="wakeBtn">⚡ Wake</button>
+      <button id="micBtn" class="micBtn" aria-label="Voice command">🎙</button>
+      <button id="sendBtn" class="sendBtn" aria-label="Send">➤</button>
+    </section>
+
+    <nav>
+      <button class="nav active" data-view="home">⌂<span>Home</span></button>
+      <button class="nav" data-view="tasks">✓<span>Tasks</span></button>
+      <button class="nav" data-view="projects">◇<span>Projects</span></button>
+      <button class="nav" data-view="memory">◉<span>Memory</span></button>
+    </nav>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modalCard">
+      <div class="modalHead"><h2 id="modalTitle">JARVIS</h2><button id="closeModal">✕</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
