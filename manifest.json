@@ -1,9 +1,0 @@
-{
-  "name":"JARVIS — Dev's Personal AI",
-  "short_name":"JARVIS",
-  "start_url":"./",
-  "display":"standalone",
-  "background_color":"#050a10",
-  "theme_color":"#08111d",
-  "description":"Personal AI interface for Dev"
-}
