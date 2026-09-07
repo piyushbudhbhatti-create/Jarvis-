@@ -1,0 +1,55 @@
+:root {
+  --bg:#050a10;
+  --panel:#0a131e;
+  --line:#1a3348;
+  --text:#e9f5ff;
+  --muted:#7890a4;
+  --cyan:#42d9ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 50% 0,#0c2030,var(--bg) 55%);color:var(--text);font-family:Arial,sans-serif;min-height:100vh}
+.app{max-width:650px;margin:auto;min-height:100vh;padding:20px 16px 90px}
+header{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 4px}
+.brand{font-size:32px;font-weight:800;letter-spacing:7px}
+#status{font-size:11px;letter-spacing:2px;color:var(--cyan);margin-top:6px}
+.icon-btn,.quick-actions button,.nav,.voice,.send{border:1px solid var(--line);background:#0a1520;color:var(--text);border-radius:14px}
+.icon-btn{font-size:20px;padding:10px 13px}
+.orb-section{text-align:center;padding:25px 0 20px}
+.orb{width:170px;height:170px;border-radius:50%;margin:0 auto 22px;border:1px solid var(--cyan);display:grid;place-items:center;box-shadow:0 0 40px rgba(66,217,255,.15),inset 0 0 35px rgba(66,217,255,.12);animation:pulse 3s infinite}
+.orb.listening{animation:listening .8s infinite alternate}
+.orb-core{width:92px;height:92px;border-radius:50%;background:radial-gradient(circle,#d9faff 0%,var(--cyan) 18%,#16657d 48%,transparent 70%)}
+@keyframes pulse{50%{transform:scale(1.04);box-shadow:0 0 65px rgba(66,217,255,.28),inset 0 0 45px rgba(66,217,255,.15)}}
+@keyframes listening{to{transform:scale(1.12);filter:brightness(1.4)}}
+#jarvisMessage{color:#b9d2e3;line-height:1.5;padding:0 20px}
+.quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 18px}
+.quick-actions button{padding:13px 7px;font-size:12px}
+.panel{background:rgba(10,19,30,.88);border:1px solid var(--line);border-radius:20px;padding:15px}
+.panel-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:12px}
+.conversation{max-height:300px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.message{padding:11px 13px;border-radius:14px;max-width:88%;line-height:1.4;font-size:14px}
+.message.user{align-self:flex-end;background:#123147}
+.message.jarvis{align-self:flex-start;background:#101d28;border:1px solid #193449}
+.input-area{display:flex;gap:8px;margin-top:15px}
+input{flex:1;background:#09131e;border:1px solid var(--line);border-radius:14px;color:white;padding:15px;outline:none}
+.voice,.send{width:48px;font-size:18px}
+nav{position:fixed;bottom:0;left:0;right:0;max-width:650px;margin:auto;background:rgba(5,10,16,.96);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:10px 4px 18px}
+.nav{border:0;background:transparent;color:var(--muted);font-size:18px;display:flex;flex-direction:column;gap:3px;align-items:center}
+.nav span{font-size:10px}.nav.active{color:var(--cyan)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:grid;place-items:center;padding:20px}
+.hidden{display:none}
+.modal-card{width:min(100%,500px);max-height:80vh;overflow:auto;background:#09131e;border:1px solid var(--line);border-radius:22px;padding:22px}
+.modal-card input,.modal-card textarea{width:100%;margin:8px 0;padding:12px;background:#071018;border:1px solid var(--line);color:white;border-radius:10px}
+.modal-card textarea{min-height:100px}
+.modal-card button{padding:11px 14px;margin:5px;border-radius:10px;border:1px solid var(--line);background:#102638;color:white}
+.list-item{padding:12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.small{font-size:12px;color:var(--muted)}
+
+
+.wake-button{
+  border:1px solid #52c7ff;
+  background:rgba(30,100,140,.18);
+  color:#dceeff;
+  border-radius:14px;
+  padding:12px 16px;
+  margin:6px;
+}
